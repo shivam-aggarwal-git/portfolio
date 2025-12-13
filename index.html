@@ -486,36 +486,46 @@
             50% { opacity: 0.3; }
         }
 
-        /* Skills - Floating Hexagons */
+        /* Skills - Card Grid Layout */
         .skills-section {
             padding: 8rem 2rem;
             max-width: 1400px;
             margin: 0 auto;
         }
 
-        .hexagon-grid {
+        .skill-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
             margin-top: 4rem;
         }
 
-        .hexagon-card {
-            background: linear-gradient(135deg, rgba(0, 243, 255, 0.1), rgba(131, 56, 236, 0.1));
+        .skill-card {
+            background: linear-gradient(135deg, rgba(26, 11, 46, 0.8), rgba(45, 27, 78, 0.6));
+            backdrop-filter: blur(20px);
             border: 2px solid rgba(0, 243, 255, 0.3);
             border-radius: 20px;
             padding: 2.5rem;
             position: relative;
             overflow: hidden;
             transition: all 0.5s;
-            clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+            height: 100%;
         }
 
-        .hexagon-card:hover {
-            transform: scale(1.1) rotate(5deg);
-            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-            border-color: var(--neon-pink);
-            box-shadow: 0 20px 60px rgba(255, 0, 110, 0.4);
+        .skill-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--neon-blue), var(--neon-pink), var(--neon-purple));
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--neon-blue);
+            box-shadow: 0 20px 60px rgba(0, 243, 255, 0.4);
         }
 
         .skill-icon {
@@ -525,7 +535,7 @@
         }
 
         .skill-title {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             font-weight: 700;
             color: var(--neon-blue);
             margin-bottom: 1.5rem;
@@ -542,7 +552,7 @@
             border: 1px solid var(--neon-blue);
             color: white;
             padding: 0.5rem 1rem;
-            border-radius: 50px;
+            border-radius: 8px;
             font-size: 0.85rem;
             transition: all 0.3s;
         }
@@ -1047,7 +1057,7 @@
             });
         });
         
-        // 3D Tilt Effect on Hero Card
+        // 3D Tilt Effect on Hero Card - No Scaling
         const heroCard = document.querySelector('.hero-card');
         if (heroCard) {
             heroCard.addEventListener('mousemove', (e) => {
@@ -1058,14 +1068,14 @@
                 const centerX = rect.width / 2;
                 const centerY = rect.height / 2;
                 
-                const rotateX = (y - centerY) / 20;
-                const rotateY = (centerX - x) / 20;
+                const rotateX = (y - centerY) / 30;
+                const rotateY = (centerX - x) / 30;
                 
-                heroCard.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+                heroCard.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1)`;
             });
             
             heroCard.addEventListener('mouseleave', () => {
-                heroCard.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+                heroCard.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
             });
         }
         
