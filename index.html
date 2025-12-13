@@ -1,228 +1,1119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Shivam Aggarwal | Technical Program Manager</title>
-  <meta name="description" content="Shivam Aggarwal | Technical Program Manager – AI, LLM, SaaS & Platform Delivery">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivam Aggarwal - Technical Program Manager AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <!-- Google Font (ATS safe – text is still plain HTML) -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        :root {
+            --terminal-green: #00ff41;
+            --terminal-cyan: #00d9ff;
+            --terminal-purple: #bd93f9;
+            --terminal-pink: #ff79c6;
+            --terminal-yellow: #f1fa8c;
+            --bg-dark: #0a0e27;
+            --bg-darker: #050814;
+            --bg-terminal: #1a1f3a;
+            --text-light: #e6e6e6;
+            --text-dim: #8b92b0;
+            --border-glow: rgba(0, 255, 65, 0.3);
+        }
 
-  <style>
-    :root {
-      --primary: #2563eb;
-      --dark: #0f172a;
-      --muted: #475569;
-      --bg: #f8fafc;
-      --card: #ffffff;
-      --border: #e5e7eb;
-    }
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--bg-darker);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-    * {
-      box-sizing: border-box;
-    }
+        /* Animated Background */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0.05;
+            background: 
+                linear-gradient(90deg, transparent 0%, var(--terminal-green) 50%, transparent 100%),
+                repeating-linear-gradient(0deg, transparent, transparent 2px, var(--terminal-cyan) 2px, var(--terminal-cyan) 4px);
+            animation: scanlines 8s linear infinite;
+        }
 
-    body {
-      margin: 0;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background-color: var(--bg);
-      color: var(--dark);
-      line-height: 1.65;
-    }
+        @keyframes scanlines {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(50px); }
+        }
 
-    .container {
-      max-width: 980px;
-      margin: auto;
-      padding: 48px 24px;
-    }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 1;
+        }
 
-    /* HEADER */
-    .header {
-      background: linear-gradient(135deg, #1e3a8a, #2563eb);
-      color: #ffffff;
-      padding: 48px 32px;
-      border-radius: 14px;
-      margin-bottom: 40px;
-    }
+        /* Terminal Header */
+        header {
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            background: rgba(10, 14, 39, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid var(--terminal-green);
+            box-shadow: 0 0 20px var(--border-glow);
+            z-index: 100;
+        }
 
-    .header h1 {
-      font-size: 2.4rem;
-      margin: 0;
-    }
+        .terminal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem 1.5rem;
+            background: var(--bg-terminal);
+            border-radius: 8px;
+            border: 1px solid var(--terminal-green);
+            box-shadow: 0 0 15px rgba(0, 255, 65, 0.2);
+        }
 
-    .header p {
-      margin: 8px 0;
-      font-size: 1.05rem;
-      opacity: 0.95;
-    }
+        .terminal-title {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-family: 'Fira Code', monospace;
+        }
 
-    .header .links a {
-      color: #ffffff;
-      text-decoration: none;
-      margin-right: 18px;
-      font-weight: 500;
-      border-bottom: 1px solid rgba(255,255,255,0.4);
-    }
+        .terminal-dots {
+            display: flex;
+            gap: 0.5rem;
+        }
 
-    /* SECTIONS */
-    section {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 32px;
-      margin-bottom: 28px;
-    }
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
 
-    h2 {
-      font-size: 1.35rem;
-      margin-top: 0;
-      border-left: 4px solid var(--primary);
-      padding-left: 12px;
-    }
+        .dot.red { background: #ff5f56; }
+        .dot.yellow { background: #ffbd2e; }
+        .dot.green { background: #27c93f; }
 
-    h3 {
-      margin-bottom: 4px;
-      font-size: 1.05rem;
-    }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
 
-    .company {
-      font-size: 0.95rem;
-      color: var(--muted);
-      margin-bottom: 10px;
-    }
+        .prompt {
+            color: var(--terminal-green);
+            font-weight: 600;
+        }
 
-    ul {
-      padding-left: 20px;
-    }
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
 
-    li {
-      margin-bottom: 10px;
-    }
+        nav a {
+            color: var(--terminal-cyan);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+            font-size: 0.95rem;
+        }
 
-    /* SKILLS GRID */
-    .skills {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 18px;
-    }
+        nav a:hover {
+            color: var(--terminal-green);
+            text-shadow: 0 0 10px var(--terminal-green);
+        }
 
-    .skill-box {
-      background: #f1f5f9;
-      border-radius: 10px;
-      padding: 16px;
-      font-size: 0.95rem;
-    }
+        nav a::before {
+            content: '> ';
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
 
-    /* FOOTER */
-    footer {
-      text-align: center;
-      margin-top: 50px;
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
+        nav a:hover::before {
+            opacity: 1;
+        }
 
-    @media (max-width: 600px) {
-      .header h1 {
-        font-size: 1.9rem;
-      }
-    }
-  </style>
+        /* Hero Terminal */
+        .hero {
+            padding: 4rem 0;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-terminal {
+            background: var(--bg-terminal);
+            border: 2px solid var(--terminal-green);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 0 30px rgba(0, 255, 65, 0.3);
+            animation: terminalGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes terminalGlow {
+            0%, 100% { box-shadow: 0 0 30px rgba(0, 255, 65, 0.3); }
+            50% { box-shadow: 0 0 50px rgba(0, 255, 65, 0.5); }
+        }
+
+        .terminal-window {
+            padding: 2rem 2.5rem;
+        }
+
+        .typing-text {
+            font-size: 1rem;
+            color: var(--text-dim);
+            margin-bottom: 2rem;
+        }
+
+        .hero-content h1 {
+            font-family: 'Fira Code', monospace;
+            font-size: 3rem;
+            margin: 1rem 0;
+            color: var(--terminal-green);
+            text-shadow: 0 0 20px rgba(0, 255, 65, 0.5);
+            animation: textGlow 2s ease-in-out infinite;
+        }
+
+        @keyframes textGlow {
+            0%, 100% { text-shadow: 0 0 20px rgba(0, 255, 65, 0.5); }
+            50% { text-shadow: 0 0 30px rgba(0, 255, 65, 0.8); }
+        }
+
+        .role {
+            color: var(--terminal-cyan);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .bio {
+            color: var(--text-dim);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            max-width: 800px;
+        }
+
+        .command-line {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 0.8rem 0;
+            font-size: 0.95rem;
+        }
+
+        .command-prompt {
+            color: var(--terminal-green);
+        }
+
+        .command {
+            color: var(--terminal-cyan);
+        }
+
+        .output {
+            color: var(--terminal-yellow);
+            padding-left: 1.5rem;
+        }
+
+        /* CTA Buttons */
+        .cta-container {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .terminal-btn {
+            padding: 1rem 2rem;
+            background: transparent;
+            border: 2px solid var(--terminal-green);
+            color: var(--terminal-green);
+            font-family: 'Fira Code', monospace;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .terminal-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--terminal-green);
+            transition: left 0.3s;
+            z-index: -1;
+        }
+
+        .terminal-btn:hover {
+            color: var(--bg-dark);
+            box-shadow: 0 0 20px var(--terminal-green);
+        }
+
+        .terminal-btn:hover::before {
+            left: 0;
+        }
+
+        .terminal-btn.secondary {
+            border-color: var(--terminal-cyan);
+            color: var(--terminal-cyan);
+        }
+
+        .terminal-btn.secondary::before {
+            background: var(--terminal-cyan);
+        }
+
+        .terminal-btn.secondary:hover {
+            box-shadow: 0 0 20px var(--terminal-cyan);
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .stat-terminal {
+            background: var(--bg-terminal);
+            border: 1px solid var(--terminal-purple);
+            border-radius: 8px;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .stat-terminal::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--terminal-purple), var(--terminal-pink));
+        }
+
+        .stat-terminal:hover {
+            transform: translateY(-10px);
+            border-color: var(--terminal-green);
+            box-shadow: 0 10px 30px rgba(0, 255, 65, 0.2);
+        }
+
+        .stat-label {
+            color: var(--terminal-cyan);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            color: var(--terminal-green);
+            font-weight: 700;
+            font-family: 'Fira Code', monospace;
+        }
+
+        .stat-desc {
+            color: var(--text-dim);
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Experience Section */
+        section {
+            padding: 6rem 0;
+        }
+
+        .section-title {
+            font-family: 'Fira Code', monospace;
+            font-size: 2.5rem;
+            color: var(--terminal-green);
+            margin-bottom: 3rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .section-title::before {
+            content: '$ ';
+            color: var(--terminal-cyan);
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--terminal-green), var(--terminal-cyan), var(--terminal-purple));
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            background: var(--bg-terminal);
+            border: 1px solid var(--terminal-cyan);
+            border-radius: 8px;
+            padding: 2rem;
+            transition: all 0.3s;
+        }
+
+        .timeline-item::before {
+            content: '>';
+            position: absolute;
+            left: -3.5rem;
+            top: 2rem;
+            width: 2rem;
+            height: 2rem;
+            background: var(--terminal-green);
+            color: var(--bg-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-weight: 700;
+            box-shadow: 0 0 20px var(--terminal-green);
+        }
+
+        .timeline-item:hover {
+            transform: translateX(10px);
+            border-color: var(--terminal-green);
+            box-shadow: 0 5px 25px rgba(0, 255, 65, 0.2);
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .job-title {
+            font-size: 1.4rem;
+            color: var(--terminal-green);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .company {
+            color: var(--terminal-cyan);
+            font-size: 1.1rem;
+        }
+
+        .location {
+            color: var(--terminal-purple);
+            font-size: 0.9rem;
+            margin-top: 0.3rem;
+        }
+
+        .date-badge {
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid var(--terminal-cyan);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            color: var(--terminal-cyan);
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
+        .achievements {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .achievements li {
+            color: var(--text-dim);
+            padding-left: 2rem;
+            margin-bottom: 0.8rem;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .achievements li::before {
+            content: '▸';
+            position: absolute;
+            left: 0.5rem;
+            color: var(--terminal-green);
+            font-size: 1.2rem;
+        }
+
+        /* Skills Matrix */
+        .skills-matrix {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-block {
+            background: var(--bg-terminal);
+            border: 1px solid var(--terminal-purple);
+            border-radius: 8px;
+            padding: 2rem;
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .skill-block::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--terminal-green), var(--terminal-cyan));
+        }
+
+        .skill-block:hover {
+            transform: scale(1.05);
+            border-color: var(--terminal-green);
+            box-shadow: 0 10px 40px rgba(0, 255, 65, 0.2);
+        }
+
+        .skill-header {
+            font-size: 1.3rem;
+            color: var(--terminal-cyan);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .skill-chip {
+            background: rgba(0, 255, 65, 0.1);
+            border: 1px solid var(--terminal-green);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            color: var(--terminal-green);
+            font-size: 0.85rem;
+            transition: all 0.3s;
+            cursor: default;
+        }
+
+        .skill-chip:hover {
+            background: var(--terminal-green);
+            color: var(--bg-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 255, 65, 0.3);
+        }
+
+        /* Contact Terminal */
+        .contact-terminal {
+            background: var(--bg-terminal);
+            border: 2px solid var(--terminal-green);
+            border-radius: 12px;
+            padding: 3rem;
+            max-width: 900px;
+            margin: 0 auto;
+            box-shadow: 0 0 40px rgba(0, 255, 65, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-terminal::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 255, 65, 0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .contact-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-title {
+            font-size: 2rem;
+            color: var(--terminal-green);
+            margin-bottom: 1rem;
+            font-family: 'Fira Code', monospace;
+        }
+
+        .contact-subtitle {
+            color: var(--terminal-cyan);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 1.5rem;
+            background: rgba(0, 255, 65, 0.05);
+            border: 1px solid var(--terminal-cyan);
+            border-radius: 6px;
+            color: var(--text-light);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .contact-item:hover {
+            background: rgba(0, 255, 65, 0.1);
+            border-color: var(--terminal-green);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(0, 255, 65, 0.2);
+        }
+
+        .icon {
+            font-size: 1.5rem;
+        }
+
+        /* Footer */
+        footer {
+            padding: 3rem 0;
+            text-align: center;
+            border-top: 1px solid var(--terminal-green);
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 20px;
+            background: var(--terminal-green);
+            animation: blink 1s infinite;
+            margin-left: 5px;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        /* Lottie Container */
+        .lottie-container {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .terminal-header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.85rem;
+            }
+
+            .timeline {
+                padding-left: 2rem;
+            }
+
+            .timeline-item::before {
+                left: -2.5rem;
+            }
+
+            .job-header {
+                flex-direction: column;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Loading Animation */
+        .loading-bar {
+            width: 100%;
+            height: 3px;
+            background: rgba(0, 255, 65, 0.2);
+            position: relative;
+            overflow: hidden;
+            margin-top: 1rem;
+        }
+
+        .loading-bar::after {
+            content: '';
+            position: absolute;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--terminal-green);
+            animation: loading 2s ease-in-out infinite;
+        }
+
+        @keyframes loading {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        /* Particles effect */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: var(--terminal-green);
+            border-radius: 50%;
+            animation: float 15s infinite;
+            opacity: 0.3;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) translateX(0);
+            }
+            25% {
+                transform: translateY(-100px) translateX(50px);
+            }
+            50% {
+                transform: translateY(-200px) translateX(-50px);
+            }
+            75% {
+                transform: translateY(-100px) translateX(50px);
+            }
+        }
+    </style>
 </head>
-
 <body>
-  <div class="container">
+    <div class="bg-animation"></div>
+    
+    <!-- Particles -->
+    <div class="particles" id="particles"></div>
 
-    <!-- HEADER -->
-    <div class="header">
-      <h1>Shivam Aggarwal</h1>
-      <p><strong>Technical Program Manager – AI, LLM & Platform Delivery</strong></p>
-      <p>Pune, India · aggarwalshivam1991@gmail.com · +91 9873216989</p>
-      <div class="links">
-        <a href="https://linkedin.com/in/shivam-aggarwal" target="_blank">LinkedIn</a>
-        <a href="https://github.com/shivam-aggarwal-git" target="_blank">GitHub</a>
-      </div>
-    </div>
+    <header>
+        <div class="container">
+            <div class="terminal-header">
+                <div class="terminal-title">
+                    <div class="terminal-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <span class="prompt">shivam@portfolio:~$</span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#about">./about</a></li>
+                        <li><a href="#experience">./experience</a></li>
+                        <li><a href="#skills">./skills</a></li>
+                        <li><a href="#contact">./contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
 
-    <!-- ABOUT -->
-    <section>
-      <h2>About Me</h2>
-      <p>
-        Technical Program Manager with 8+ years of experience delivering AI, LLM, SaaS,
-        and FinTech platforms across multi-region, multi-team environments.
-        I specialize in end-to-end program ownership, technical execution,
-        dependency management, and release orchestration for customer-facing systems.
-      </p>
-    </section>
+    <main>
+        <section class="hero" id="about">
+            <div class="container">
+                <div class="hero-terminal">
+                    <div class="terminal-window">
+                        <div class="typing-text">
+                            <span class="command-prompt">$</span> cat profile.txt
+                        </div>
+                        
+                        <div class="hero-content">
+                            <h1>SHIVAM AGGARWAL<span class="cursor"></span></h1>
+                            <p class="role">> Technical Program Manager AI | LLM & SaaS Architect</p>
+                            <p class="bio">
+                                Delivering AI-powered platforms across multi-region environments. 8+ years orchestrating 
+                                cross-functional teams, shipping LLM integrations, and driving technical excellence with 
+                                95% on-time delivery and zero critical incidents.
+                            </p>
 
-    <!-- CORE STRENGTHS -->
-    <section>
-      <h2>Core Strengths</h2>
-      <ul>
-        <li>End-to-end technical program delivery</li>
-        <li>Multi-team and cross-functional execution</li>
-        <li>Dependency tracking and risk mitigation</li>
-        <li>Release orchestration and production readiness</li>
-        <li>LLM, RAG, and API integration programs</li>
-        <li>Multi-region stakeholder alignment</li>
-      </ul>
-    </section>
+                            <div class="command-line">
+                                <span class="command-prompt">$</span>
+                                <span class="command">grep -i "expertise" profile.txt</span>
+                            </div>
+                            <div class="output">
+                                ✓ LLM Integrations (LangChain, GPT APIs, RAG Workflows)<br>
+                                ✓ Cross-Functional Program Leadership (30+ Engineers)<br>
+                                ✓ Multi-Region Deployments (99.8% Stability)<br>
+                                ✓ API Architecture & System Design
+                            </div>
 
-    <!-- EXPERIENCE -->
-    <section>
-      <h2>Professional Experience</h2>
+                            <div class="loading-bar"></div>
 
-      <h3>Technical Program Lead – AI & Platform Integrations</h3>
-      <div class="company">Bajaj FinServ Direct Limited · Aug 2021 – Present</div>
-      <ul>
-        <li>Owned end-to-end delivery of NLP chatbot and RAG-powered search features, coordinating LLM integrations across 30+ engineers</li>
-        <li>Managed execution across three engineering teams, achieving 95% on-time delivery with zero critical production incidents</li>
-        <li>Drove readiness for 8+ API integrations, reducing integration issues by 18%</li>
-        <li>Directed UAT planning and multi-region deployments achieving 99.8% system stability</li>
-      </ul>
+                            <div class="cta-container">
+                                <a href="#contact" class="terminal-btn">./hire_me</a>
+                                <a href="https://github.com/shivam-aggarwal-git" target="_blank" class="terminal-btn secondary">./view_code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-      <h3>Program Manager – Platform & Data Integrations</h3>
-      <div class="company">Siroi Solution Sdn Bhd · Dec 2018 – Aug 2021</div>
-      <ul>
-        <li>Led delivery of the ONDC seller onboarding platform across API, AI, and data teams</li>
-        <li>Improved on-time delivery by 20% and reduced cross-team blockers by 35%</li>
-        <li>Reduced release defects by 15% through structured ETL validation</li>
-      </ul>
+                <div class="stats-grid">
+                    <div class="stat-terminal">
+                        <div class="stat-label">$ uptime --years</div>
+                        <div class="stat-value">8+</div>
+                        <div class="stat-desc">Years of technical program leadership</div>
+                    </div>
+                    <div class="stat-terminal">
+                        <div class="stat-label">$ count --team-size</div>
+                        <div class="stat-value">30+</div>
+                        <div class="stat-desc">Engineers coordinated across teams</div>
+                    </div>
+                    <div class="stat-terminal">
+                        <div class="stat-label">$ metrics --delivery</div>
+                        <div class="stat-value">95%</div>
+                        <div class="stat-desc">On-time project completion rate</div>
+                    </div>
+                    <div class="stat-terminal">
+                        <div class="stat-label">$ status --production</div>
+                        <div class="stat-value">0</div>
+                        <div class="stat-desc">Critical incidents in 12 months</div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      <h3>Program Coordinator</h3>
-      <div class="company">Alepo Technologies Inc. · Nov 2017 – Dec 2018</div>
-      <ul>
-        <li>Supported senior TPMs in AAA and mediation platform deployments across LATAM and U.S.</li>
-        <li>Assisted UAT coordination and API readiness validation</li>
-      </ul>
-    </section>
+        <section id="experience">
+            <div class="container">
+                <h2 class="section-title">work_history.log</h2>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="job-header">
+                            <div>
+                                <div class="job-title">Technical Program Lead - AI & Platform Integrations</div>
+                                <div class="company">Bajaj FinServ Direct Limited</div>
+                                <div class="location">📍 Pune, India</div>
+                            </div>
+                            <div class="date-badge">Aug 2021 - Present</div>
+                        </div>
+                        <ul class="achievements">
+                            <li>Orchestrated end-to-end delivery of NLP chatbot and RAG-powered search, coordinating LLM integrations (LangChain, GPT APIs, Pinecone, FAISS) across 30+ engineers—shipped 2 major releases on schedule, enabling 30% automation improvement</li>
+                            <li>Managed program execution across 3 engineering teams, establishing sprint cadence and dependency tracking; achieved 95% on-time completion with zero critical production incidents over 12 months</li>
+                            <li>Drove technical readiness for 8+ API integrations (AEM, CRM, payment gateways), reducing integration issues by 18% through staged rollouts and validation frameworks</li>
+                            <li>Directed multi-region deployments (India, Malaysia) achieving 99.8% system stability with established runbooks and rollback procedures</li>
+                        </ul>
+                    </div>
 
-    <!-- SKILLS -->
-    <section>
-      <h2>Skills</h2>
-      <div class="skills">
-        <div class="skill-box"><strong>Program Leadership</strong><br>Execution, Dependency Management, Release Orchestration</div>
-        <div class="skill-box"><strong>AI & Platforms</strong><br>LLM, RAG, API Architecture, Microservices</div>
-        <div class="skill-box"><strong>Tools</strong><br>JIRA, Confluence, AWS, Docker, Jenkins, Git</div>
-      </div>
-    </section>
+                    <div class="timeline-item">
+                        <div class="job-header">
+                            <div>
+                                <div class="job-title">Program Manager - Platform & Data Integrations</div>
+                                <div class="company">Siroi Solution Sdn Bhd</div>
+                                <div class="location">📍 Kuala Lumpur, Malaysia</div>
+                            </div>
+                            <div class="date-badge">Dec 2018 - Aug 2021</div>
+                        </div>
+                        <ul class="achievements">
+                            <li>Led delivery of ONDC seller onboarding platform, coordinating API workflows, LLM-powered search, and ETL pipelines across 25+ engineers—shipped 20% faster through tighter specifications</li>
+                            <li>Coordinated concurrent ERP, BI, and AI module delivery, establishing sync cadence and metrics dashboards; improved on-time delivery by 20% and reduced cross-team blockers by 35%</li>
+                            <li>Managed ETL pipeline design and data validation frameworks, reducing release defects by 15% and improving data accuracy from 92% to 97%</li>
+                        </ul>
+                    </div>
 
-    <!-- EDUCATION -->
-    <section>
-      <h2>Education & Certifications</h2>
-      <p>
-        MBA – Information Technology, Symbiosis International University<br>
-        B.E. – Computer Science, Uttarakhand Technical University
-      </p>
-      <p>
-        PMP · PgMP · CSM · CSPO
-      </p>
-    </section>
+                    <div class="timeline-item">
+                        <div class="job-header">
+                            <div>
+                                <div class="job-title">Program Coordinator</div>
+                                <div class="company">Alepo Technologies Inc.</div>
+                                <div class="location">📍 Austin, United States</div>
+                            </div>
+                            <div class="date-badge">Nov 2017 - Dec 2018</div>
+                        </div>
+                        <ul class="achievements">
+                            <li>Coordinated AAA and mediation deployments across LATAM and U.S., aligning engineering, QA, and client teams to meet aggressive deployment timelines</li>
+                            <li>Ensured integration quality and system stability across multiple regions and stakeholder groups</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="container">
+                <h2 class="section-title">tech_stack.json</h2>
+                
+                <div class="skills-matrix">
+                    <div class="skill-block">
+                        <div class="skill-header">🤖 AI & LLM Engineering</div>
+                        <div class="skill-items">
+                            <span class="skill-chip">LangChain</span>
+                            <span class="skill-chip">RAG Workflows</span>
+                            <span class="skill-chip">GPT APIs</span>
+                            <span class="skill-chip">Pinecone</span>
+                            <span class="skill-chip">FAISS</span>
+                            <span class="skill-chip">Prompt Engineering</span>
+                            <span class="skill-chip">NLP</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-block">
+                        <div class="skill-header">📊 Data & Analytics</div>
+                        <div class="skill-items">
+                            <span class="skill-chip">SQL</span>
+                            <span class="skill-chip">NoSQL</span>
+                            <span class="skill-chip">ETL Pipelines</span>
+                            <span class="skill-chip">Power BI</span>
+                            <span class="skill-chip">Tableau</span>
+                            <span class="skill-chip">Kibana</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-block">
+                        <div class="skill-header">☁️ Cloud & DevOps</div>
+                        <div class="skill-items">
+                            <span class="skill-chip">AWS (S3, Lambda, EC2, RDS)</span>
+                            <span class="skill-chip">Docker</span>
+                            <span class="skill-chip">Nginx</span>
+                            <span class="skill-chip">Jenkins</span>
+                            <span class="skill-chip">Git</span>
+                            <span class="skill-chip">IaC</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-block">
+                        <div class="skill-header">🎯 Program Leadership</div>
+                        <div class="skill-items">
+                            <span class="skill-chip">Cross-Functional Teams</span>
+                            <span class="skill-chip">Multi-Team Coordination</span>
+                            <span class="skill-chip">Dependency Management</span>
+                            <span class="skill-chip">Release Orchestration</span>
+                            <span class="skill-chip">Sprint Planning</span>
+                            <span class="skill-chip">Stakeholder Alignment</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-block">
+                        <div class="skill-header">🏢 Enterprise Platforms</div>
+                        <div class="skill-items">
+                            <span class="skill-chip">Salesforce CRM</span>
+                            <span class="skill-chip">AEM</span>
+                            <span class="skill-chip">Odoo</span>
+                            <span class="skill-chip">JIRA</span>
+                            <span class="skill-chip">Confluence</span>
+                            <span class="skill-chip">Swagger</span>
+                            <span class="skill-chip">Postman</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-block">
+                        <div class="skill-header">🎓 Certifications</div>
+                        <div class="skill-items">
+                            <span class="skill-chip">PMP - PMI</span>
+                            <span class="skill-chip">CSM - Scrum Alliance</span>
+                            <span class="skill-chip">CSPO - Scrum Alliance</span>
+                            <span class="skill-chip">PgMP - PMI</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-block">
+                        <div class="skill-header">🎓 Education</div>
+                        <div class="skill-items">
+                            <span class="skill-chip">MBA - IT</span>
+                            <span class="skill-chip">B.E. - Computer Science</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2 class="section-title">contact.sh</h2>
+                
+                <div class="contact-terminal">
+                    <div class="contact-content">
+                        <div class="typing-text">
+                            <span class="command-prompt">$</span> ./initiate_connection.sh
+                        </div>
+                        <h3 class="contact-title">Let's Build Something Amazing</h3>
+                        <p class="contact-subtitle">> Open to relocate | Ready for exciting opportunities</p>
+                        
+                        <div class="loading-bar"></div>
+
+                        <div class="contact-grid">
+                            <a href="mailto:aggarwalshivam1991@gmail.com" class="contact-item">
+                                <span class="icon">📧</span>
+                                <div>
+                                    <div style="font-size: 0.85rem; color: var(--terminal-cyan);">Email</div>
+                                    <div style="font-size: 0.9rem;">Send Message</div>
+                                </div>
+                            </a>
+                            <a href="tel:+919873216989" class="contact-item">
+                                <span class="icon">📱</span>
+                                <div>
+                                    <div style="font-size: 0.85rem; color: var(--terminal-cyan);">Phone</div>
+                                    <div style="font-size: 0.9rem;">+91 9873216989</div>
+                                </div>
+                            </a>
+                            <a href="https://linkedin.com/in/shivam-aggarwal" target="_blank" class="contact-item">
+                                <span class="icon">💼</span>
+                                <div>
+                                    <div style="font-size: 0.85rem; color: var(--terminal-cyan);">LinkedIn</div>
+                                    <div style="font-size: 0.9rem;">Connect</div>
+                                </div>
+                            </a>
+                            <a href="https://github.com/shivam-aggarwal-git" target="_blank" class="contact-item">
+                                <span class="icon">💻</span>
+                                <div>
+                                    <div style="font-size: 0.85rem; color: var(--terminal-cyan);">GitHub</div>
+                                    <div style="font-size: 0.9rem;">View Code</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="command-line" style="margin-top: 2rem;">
+                            <span class="command-prompt">$</span>
+                            <span class="command">echo "Available for immediate opportunities"</span>
+                        </div>
+                        <div class="output" style="color: var(--terminal-green); font-weight: 600;">
+                            ✓ Connection established. Ready to discuss exciting opportunities!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
-      Built for recruiters and hiring panels · Execution-focused TPM portfolio
+        <div class="container">
+            <div class="command-line" style="justify-content: center;">
+                <span class="command-prompt">$</span>
+                <span style="color: var(--text-dim);">© 2024 Shivam Aggarwal | Built with passion & code</span>
+            </div>
+            <p style="margin-top: 1rem; color: var(--terminal-cyan);">
+                "Transforming ideas into scalable AI solutions"
+            </p>
+        </div>
     </footer>
 
-  </div>
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Create floating particles
+        const particlesContainer = document.getElementById('particles');
+        for (let i = 0; i < 30; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.top = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 15 + 's';
+            particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+            particlesContainer.appendChild(particle);
+        }
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0) translateX(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.timeline-item, .skill-block, .stat-terminal').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            observer.observe(el);
+        });
+
+        // Typing effect for hero
+        const heroText = document.querySelector('.hero-content h1');
+        if (heroText) {
+            const text = heroText.textContent;
+            heroText.textContent = '';
+            let i = 0;
+            
+            const typeWriter = () => {
+                if (i < text.length) {
+                    heroText.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 100);
+                }
+            };
+            
+            setTimeout(typeWriter, 500);
+        }
+
+        // Add glitch effect on hover for section titles
+        document.querySelectorAll('.section-title').forEach(title => {
+            title.addEventListener('mouseenter', function() {
+                this.style.textShadow = '2px 2px var(--terminal-cyan), -2px -2px var(--terminal-pink)';
+            });
+            title.addEventListener('mouseleave', function() {
+                this.style.textShadow = 'none';
+            });
+        });
+    </script>
 </body>
 </html>
