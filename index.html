@@ -2,85 +2,130 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Shivam Aggarwal | Technical Program Manager – AI, LLM, SaaS & Platform Delivery" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Shivam Aggarwal | Technical Program Manager</title>
+  <meta name="description" content="Shivam Aggarwal | Technical Program Manager – AI, LLM, SaaS & Platform Delivery">
 
-  <!-- ATS-safe, system fonts -->
+  <!-- Google Font (ATS safe – text is still plain HTML) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
+    :root {
+      --primary: #2563eb;
+      --dark: #0f172a;
+      --muted: #475569;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --border: #e5e7eb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #ffffff;
-      color: #1f2937;
-      line-height: 1.6;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--dark);
+      line-height: 1.65;
     }
 
     .container {
-      max-width: 900px;
+      max-width: 980px;
       margin: auto;
-      padding: 40px 24px;
+      padding: 48px 24px;
     }
 
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 4px;
+    /* HEADER */
+    .header {
+      background: linear-gradient(135deg, #1e3a8a, #2563eb);
+      color: #ffffff;
+      padding: 48px 32px;
+      border-radius: 14px;
+      margin-bottom: 40px;
+    }
+
+    .header h1 {
+      font-size: 2.4rem;
+      margin: 0;
+    }
+
+    .header p {
+      margin: 8px 0;
+      font-size: 1.05rem;
+      opacity: 0.95;
+    }
+
+    .header .links a {
+      color: #ffffff;
+      text-decoration: none;
+      margin-right: 18px;
+      font-weight: 500;
+      border-bottom: 1px solid rgba(255,255,255,0.4);
+    }
+
+    /* SECTIONS */
+    section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 32px;
+      margin-bottom: 28px;
     }
 
     h2 {
-      font-size: 1.4rem;
-      margin-top: 40px;
-      border-bottom: 2px solid #e5e7eb;
-      padding-bottom: 6px;
+      font-size: 1.35rem;
+      margin-top: 0;
+      border-left: 4px solid var(--primary);
+      padding-left: 12px;
     }
 
     h3 {
-      font-size: 1.1rem;
-      margin-top: 24px;
-    }
-
-    p {
-      margin: 10px 0;
-    }
-
-    ul {
-      margin: 10px 0 20px 20px;
-    }
-
-    li {
-      margin-bottom: 8px;
-    }
-
-    .subtitle {
-      color: #4b5563;
-      font-size: 1rem;
-    }
-
-    .links a {
-      margin-right: 16px;
-      text-decoration: none;
-      color: #2563eb;
-      font-weight: 500;
-    }
-
-    .section-note {
-      color: #374151;
-      font-size: 0.95rem;
-    }
-
-    .role {
-      font-weight: 600;
+      margin-bottom: 4px;
+      font-size: 1.05rem;
     }
 
     .company {
-      color: #374151;
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 10px;
     }
 
-    .footer {
-      margin-top: 60px;
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    /* SKILLS GRID */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+
+    .skill-box {
+      background: #f1f5f9;
+      border-radius: 10px;
+      padding: 16px;
+      font-size: 0.95rem;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      color: var(--muted);
       font-size: 0.9rem;
-      color: #6b7280;
+    }
+
+    @media (max-width: 600px) {
+      .header h1 {
+        font-size: 1.9rem;
+      }
     }
   </style>
 </head>
@@ -89,136 +134,94 @@
   <div class="container">
 
     <!-- HEADER -->
-    <h1>Shivam Aggarwal</h1>
-    <p class="subtitle">
-      Technical Program Manager – AI, LLM & Platform Delivery
-    </p>
-
-    <p>
-      Pune, India · 
-      <a href="mailto:aggarwalshivam1991@gmail.com">aggarwalshivam1991@gmail.com</a> · 
-      +91 9873216989
-    </p>
-
-    <div class="links">
-      <a href="https://linkedin.com/in/shivam-aggarwal" target="_blank">LinkedIn</a>
-      <a href="https://github.com/shivam-aggarwal-git" target="_blank">GitHub</a>
+    <div class="header">
+      <h1>Shivam Aggarwal</h1>
+      <p><strong>Technical Program Manager – AI, LLM & Platform Delivery</strong></p>
+      <p>Pune, India · aggarwalshivam1991@gmail.com · +91 9873216989</p>
+      <div class="links">
+        <a href="https://linkedin.com/in/shivam-aggarwal" target="_blank">LinkedIn</a>
+        <a href="https://github.com/shivam-aggarwal-git" target="_blank">GitHub</a>
+      </div>
     </div>
 
     <!-- ABOUT -->
-    <h2>About</h2>
-    <p>
-      Technical Program Manager with 8+ years of experience delivering AI, LLM, SaaS,
-      and FinTech platforms across multi-region, multi-team environments.
-      I specialize in end-to-end program ownership, technical execution,
-      dependency management, and release orchestration for complex, customer-facing systems.
-    </p>
-
-    <p>
-      I have led programs across India, Malaysia, and the United States,
-      working closely with engineering, architecture, QA, and platform teams
-      to ship reliable AI-enabled solutions on time and at scale.
-    </p>
+    <section>
+      <h2>About Me</h2>
+      <p>
+        Technical Program Manager with 8+ years of experience delivering AI, LLM, SaaS,
+        and FinTech platforms across multi-region, multi-team environments.
+        I specialize in end-to-end program ownership, technical execution,
+        dependency management, and release orchestration for customer-facing systems.
+      </p>
+    </section>
 
     <!-- CORE STRENGTHS -->
-    <h2>Core Strengths</h2>
-    <ul>
-      <li>End-to-end technical program delivery</li>
-      <li>Multi-team and cross-functional execution</li>
-      <li>Dependency tracking and risk mitigation</li>
-      <li>Release orchestration and deployment readiness</li>
-      <li>LLM, RAG, and API integration programs</li>
-      <li>Multi-region stakeholder coordination</li>
-    </ul>
+    <section>
+      <h2>Core Strengths</h2>
+      <ul>
+        <li>End-to-end technical program delivery</li>
+        <li>Multi-team and cross-functional execution</li>
+        <li>Dependency tracking and risk mitigation</li>
+        <li>Release orchestration and production readiness</li>
+        <li>LLM, RAG, and API integration programs</li>
+        <li>Multi-region stakeholder alignment</li>
+      </ul>
+    </section>
 
     <!-- EXPERIENCE -->
-    <h2>Professional Experience</h2>
+    <section>
+      <h2>Professional Experience</h2>
 
-    <h3 class="role">Technical Program Lead – AI & Platform Integrations</h3>
-    <p class="company">Bajaj FinServ Direct Limited · Aug 2021 – Present · Pune, India</p>
-    <ul>
-      <li>
-        Owned end-to-end delivery of NLP chatbot and RAG-powered search features,
-        coordinating LLM integrations (LangChain, GPT APIs, Pinecone, FAISS)
-        across 30+ engineers; shipped 2 major releases on schedule.
-      </li>
-      <li>
-        Managed execution across three engineering teams by establishing sprint cadence,
-        dependency tracking, and release gates; achieved 95% on-time delivery with
-        zero critical production incidents in the last 12 months.
-      </li>
-      <li>
-        Drove technical readiness for 8+ API integrations including AEM, CRM,
-        and payment gateways, reducing integration issues by 18%.
-      </li>
-      <li>
-        Directed UAT planning and multi-region deployments (India, Malaysia),
-        achieving 99.8% system stability through runbooks and rollback procedures.
-      </li>
-    </ul>
+      <h3>Technical Program Lead – AI & Platform Integrations</h3>
+      <div class="company">Bajaj FinServ Direct Limited · Aug 2021 – Present</div>
+      <ul>
+        <li>Owned end-to-end delivery of NLP chatbot and RAG-powered search features, coordinating LLM integrations across 30+ engineers</li>
+        <li>Managed execution across three engineering teams, achieving 95% on-time delivery with zero critical production incidents</li>
+        <li>Drove readiness for 8+ API integrations, reducing integration issues by 18%</li>
+        <li>Directed UAT planning and multi-region deployments achieving 99.8% system stability</li>
+      </ul>
 
-    <h3 class="role">Program Manager – Platform & Data Integrations</h3>
-    <p class="company">Siroi Solution Sdn Bhd · Dec 2018 – Aug 2021 · Kuala Lumpur, Malaysia</p>
-    <ul>
-      <li>
-        Led delivery of the ONDC seller onboarding platform,
-        coordinating API workflows, LLM-powered search,
-        and ETL pipelines across 25+ engineers.
-      </li>
-      <li>
-        Coordinated concurrent ERP, BI, and AI module delivery,
-        improving on-time delivery by 20% and reducing cross-team blockers by 35%.
-      </li>
-      <li>
-        Managed ETL pipeline design and data validation frameworks,
-        reducing release defects by 15% and improving data accuracy from 92% to 97%.
-      </li>
-    </ul>
+      <h3>Program Manager – Platform & Data Integrations</h3>
+      <div class="company">Siroi Solution Sdn Bhd · Dec 2018 – Aug 2021</div>
+      <ul>
+        <li>Led delivery of the ONDC seller onboarding platform across API, AI, and data teams</li>
+        <li>Improved on-time delivery by 20% and reduced cross-team blockers by 35%</li>
+        <li>Reduced release defects by 15% through structured ETL validation</li>
+      </ul>
 
-    <h3 class="role">Program Coordinator</h3>
-    <p class="company">Alepo Technologies Inc. · Nov 2017 – Dec 2018 · Austin, USA</p>
-    <ul>
-      <li>
-        Supported senior TPMs in coordinating AAA and mediation platform deployments
-        across LATAM and U.S. regions.
-      </li>
-      <li>
-        Assisted UAT coordination across multiple time zones,
-        tracking defects and validating API readiness prior to production cutovers.
-      </li>
-    </ul>
+      <h3>Program Coordinator</h3>
+      <div class="company">Alepo Technologies Inc. · Nov 2017 – Dec 2018</div>
+      <ul>
+        <li>Supported senior TPMs in AAA and mediation platform deployments across LATAM and U.S.</li>
+        <li>Assisted UAT coordination and API readiness validation</li>
+      </ul>
+    </section>
 
     <!-- SKILLS -->
-    <h2>Skills</h2>
-    <ul>
-      <li><strong>Program Management:</strong> Cross-functional execution, dependency management, release orchestration</li>
-      <li><strong>AI & Platforms:</strong> LLM integrations, RAG workflows, API architecture, microservices</li>
-      <li><strong>Tools:</strong> JIRA, Confluence, Swagger, Postman, AWS, Docker, Jenkins, Git, Kibana</li>
-    </ul>
+    <section>
+      <h2>Skills</h2>
+      <div class="skills">
+        <div class="skill-box"><strong>Program Leadership</strong><br>Execution, Dependency Management, Release Orchestration</div>
+        <div class="skill-box"><strong>AI & Platforms</strong><br>LLM, RAG, API Architecture, Microservices</div>
+        <div class="skill-box"><strong>Tools</strong><br>JIRA, Confluence, AWS, Docker, Jenkins, Git</div>
+      </div>
+    </section>
 
     <!-- EDUCATION -->
-    <h2>Education</h2>
-    <p>
-      MBA – Information Technology, Symbiosis International University<br/>
-      Bachelor of Engineering – Computer Science, Uttarakhand Technical University
-    </p>
-
-    <!-- CERTIFICATIONS -->
-    <h2>Certifications</h2>
-    <ul>
-      <li>Project Management Professional (PMP)</li>
-      <li>Program Management Professional (PgMP)</li>
-      <li>Certified Scrum Master (CSM)</li>
-      <li>Certified Scrum Product Owner (CSPO)</li>
-    </ul>
-
-    <!-- FOOTER -->
-    <div class="footer">
+    <section>
+      <h2>Education & Certifications</h2>
       <p>
-        This portfolio highlights how I operate as a Technical Program Manager:
-        execution-focused, technically grounded, and accountable for delivery.
+        MBA – Information Technology, Symbiosis International University<br>
+        B.E. – Computer Science, Uttarakhand Technical University
       </p>
-    </div>
+      <p>
+        PMP · PgMP · CSM · CSPO
+      </p>
+    </section>
+
+    <footer>
+      Built for recruiters and hiring panels · Execution-focused TPM portfolio
+    </footer>
 
   </div>
 </body>
