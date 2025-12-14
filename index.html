@@ -89,7 +89,7 @@
             opacity: 0;
         }
 
-        /* Mobile Menu Toggle */
+        /* Mobile Menu Toggle - Always visible on mobile */
         .mobile-menu-toggle {
             display: none;
             position: fixed;
@@ -98,12 +98,29 @@
             z-index: 1001;
             background: var(--neon-blue);
             border: none;
-            width: 50px;
-            height: 50px;
+            width: 55px;
+            height: 55px;
             border-radius: 50%;
             cursor: pointer;
-            box-shadow: 0 4px 20px rgba(0, 243, 255, 0.5);
+            box-shadow: 0 4px 20px rgba(0, 243, 255, 0.8);
             transition: all 0.3s;
+        }
+
+        /* Show on tablet and mobile */
+        @media (max-width: 1024px) {
+            .mobile-menu-toggle {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            nav {
+                display: none;
+            }
+            
+            nav.nav-open {
+                display: flex;
+            }
         }
 
         .mobile-menu-toggle:active {
@@ -152,7 +169,7 @@
             top: 0;
         }
 
-        /* Mobile Contact Widget */
+        /* Mobile Contact Widget - Always visible on mobile */
         .mobile-contact-widget {
             display: none;
             position: fixed;
@@ -163,16 +180,23 @@
             flex-direction: column;
         }
 
+        /* Show on tablet and mobile */
+        @media (max-width: 1024px) {
+            .mobile-contact-widget {
+                display: flex;
+            }
+        }
+
         .mobile-contact-btn {
-            width: 55px;
-            height: 55px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             text-decoration: none;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
             transition: all 0.3s;
             animation: floatWidget 3s ease-in-out infinite;
         }
