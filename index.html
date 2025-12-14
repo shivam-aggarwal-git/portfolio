@@ -3,7 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shivam Aggarwal - TPM Portfolio</title>
+    <meta name="description" content="Shivam Aggarwal - Technical Program Manager with 8+ years orchestrating AI, LLM, and SaaS platforms. Expert in cross-functional leadership, release orchestration, and multi-team coordination with 95% on-time delivery.">
+    <meta name="keywords" content="Technical Program Manager, TPM, AI Program Manager, LLM Integration, Cross-functional Leadership, Release Orchestration, Dependency Management, Sprint Planning, Bajaj FinServ, Program Management, PMP, Scrum Master">
+    <meta name="author" content="Shivam Aggarwal">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Shivam Aggarwal - Technical Program Manager AI">
+    <meta property="og:description" content="8+ years orchestrating AI-powered platforms across multi-region environments. Expert in dependency management, release orchestration, and multi-team coordination.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shivam-aggarwal-git.github.io/portfolio/">
+    <meta property="og:image" content="https://shivam-aggarwal-git.github.io/portfolio/og-image.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Shivam Aggarwal - Technical Program Manager AI">
+    <meta name="twitter:description" content="8+ years orchestrating AI-powered platforms. 95% on-time delivery, zero critical incidents.">
+    <meta name="twitter:image" content="https://shivam-aggarwal-git.github.io/portfolio/twitter-image.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://shivam-aggarwal-git.github.io/portfolio/">
+    
+    <title>Shivam Aggarwal - Technical Program Manager AI | Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -60,6 +81,75 @@
             border-radius: 50px;
             border: 1px solid rgba(0, 243, 255, 0.3);
             box-shadow: 0 8px 32px rgba(0, 243, 255, 0.2);
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+
+        nav.nav-hidden {
+            transform: translateY(-150px);
+            opacity: 0;
+        }
+
+        /* Mobile Menu Toggle */
+        .mobile-menu-toggle {
+            display: none;
+            position: fixed;
+            top: 1.5rem;
+            right: 1.5rem;
+            z-index: 1001;
+            background: var(--neon-blue);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(0, 243, 255, 0.5);
+            transition: all 0.3s;
+        }
+
+        .mobile-menu-toggle:active {
+            transform: scale(0.95);
+        }
+
+        .hamburger {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--dark-bg);
+            position: relative;
+            margin: 0 auto;
+            transition: all 0.3s;
+        }
+
+        .hamburger::before,
+        .hamburger::after {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 2px;
+            background: var(--dark-bg);
+            transition: all 0.3s;
+        }
+
+        .hamburger::before {
+            top: -8px;
+        }
+
+        .hamburger::after {
+            top: 8px;
+        }
+
+        .mobile-menu-toggle.active .hamburger {
+            background: transparent;
+        }
+
+        .mobile-menu-toggle.active .hamburger::before {
+            transform: rotate(45deg);
+            top: 0;
+        }
+
+        .mobile-menu-toggle.active .hamburger::after {
+            transform: rotate(-45deg);
+            top: 0;
         }
 
         nav a {
@@ -737,7 +827,11 @@
     <canvas id="particles-canvas"></canvas>
     
     <div class="content-wrapper">
-        <nav>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+            <span class="hamburger"></span>
+        </button>
+
+        <nav role="navigation" aria-label="Main navigation">
             <a href="#home">Home</a>
             <a href="#experience">Timeline</a>
             <a href="#skills">Skills</a>
@@ -749,7 +843,7 @@
                 <h1 class="glitch-text" data-text="SHIVAM AGGARWAL">
                     <span class="neon-text">SHIVAM AGGARWAL</span>
                 </h1>
-                <div class="role-tag">⚡ Technical Program Manager • AI & Platforms</div>
+                <div class="role-tag" role="text">⚡ Technical Program Manager • AI & Platforms</div>
                 <p class="hero-description">
                     I <span class="highlight">orchestrate</span> complex programs across <span class="highlight">30+ engineers</span>, 
                     shipping <span class="highlight">AI-powered platforms</span> with <span class="highlight">95% on-time delivery</span>. 
@@ -758,28 +852,28 @@
                     maintaining <span class="highlight">zero critical incidents</span>.
                 </p>
 
-                <div class="stats-container">
+                <div class="stats-container" role="region" aria-label="Performance metrics">
                     <div class="stat-orb">
-                        <div class="stat-number">8+</div>
+                        <div class="stat-number" aria-label="8 plus years">8+</div>
                         <div class="stat-label">Years Leading</div>
                     </div>
                     <div class="stat-orb">
-                        <div class="stat-number">30+</div>
+                        <div class="stat-number" aria-label="30 plus team members">30+</div>
                         <div class="stat-label">Team Size</div>
                     </div>
                     <div class="stat-orb">
-                        <div class="stat-number">95%</div>
+                        <div class="stat-number" aria-label="95 percent on-time">95%</div>
                         <div class="stat-label">On-Time</div>
                     </div>
                     <div class="stat-orb">
-                        <div class="stat-number">0</div>
+                        <div class="stat-number" aria-label="Zero critical issues">0</div>
                         <div class="stat-label">Critical Issues</div>
                     </div>
                 </div>
 
                 <div class="cta-container">
-                    <a href="#contact" class="neon-btn neon-btn-primary">📋 Let's Connect</a>
-                    <a href="https://linkedin.com/in/shivam-aggarwal" target="_blank" class="neon-btn neon-btn-secondary">💼 LinkedIn</a>
+                    <a href="#contact" class="neon-btn neon-btn-primary" aria-label="Contact Shivam">📋 Let's Connect</a>
+                    <a href="https://linkedin.com/in/shivam-aggarwal" target="_blank" rel="noopener noreferrer" class="neon-btn neon-btn-secondary" aria-label="View LinkedIn profile">💼 LinkedIn</a>
                 </div>
             </div>
         </section>
@@ -843,8 +937,8 @@
         <section class="skills-section" id="skills">
             <h2 class="section-title"><span class="neon-text">Orchestration Stack</span></h2>
             
-            <div class="hexagon-grid">
-                <div class="hexagon-card">
+            <div class="skill-grid">
+                <div class="skill-card">
                     <span class="skill-icon">🤖</span>
                     <h3 class="skill-title">AI & LLM</h3>
                     <div class="skill-tags">
@@ -857,7 +951,7 @@
                     </div>
                 </div>
 
-                <div class="hexagon-card">
+                <div class="skill-card">
                     <span class="skill-icon">🎯</span>
                     <h3 class="skill-title">Program Leadership</h3>
                     <div class="skill-tags">
@@ -869,7 +963,7 @@
                     </div>
                 </div>
 
-                <div class="hexagon-card">
+                <div class="skill-card">
                     <span class="skill-icon">📊</span>
                     <h3 class="skill-title">Data & Analytics</h3>
                     <div class="skill-tags">
@@ -882,7 +976,7 @@
                     </div>
                 </div>
 
-                <div class="hexagon-card">
+                <div class="skill-card">
                     <span class="skill-icon">☁️</span>
                     <h3 class="skill-title">Cloud & DevOps</h3>
                     <div class="skill-tags">
@@ -895,7 +989,7 @@
                     </div>
                 </div>
 
-                <div class="hexagon-card">
+                <div class="skill-card">
                     <span class="skill-icon">🏢</span>
                     <h3 class="skill-title">Enterprise Tools</h3>
                     <div class="skill-tags">
@@ -908,7 +1002,7 @@
                     </div>
                 </div>
 
-                <div class="hexagon-card">
+                <div class="skill-card">
                     <span class="skill-icon">🎓</span>
                     <h3 class="skill-title">Certifications</h3>
                     <div class="skill-tags">
@@ -928,25 +1022,25 @@
                     <p class="contact-subtitle">🚀 Open to Relocate • Ready for Exciting Opportunities</p>
                     
                     <div class="contact-grid">
-                        <a href="mailto:aggarwalshivam1991@gmail.com" class="contact-item">
+                        <a href="mailto:aggarwalshivam1991@gmail.com" class="contact-item" aria-label="Email Shivam Aggarwal">
                             <div class="contact-icon">📧</div>
                             <div class="contact-label">Email</div>
                             <div class="contact-value">Send Message</div>
                         </a>
                         
-                        <a href="tel:+919873216989" class="contact-item">
+                        <a href="tel:+919873216989" class="contact-item" aria-label="Call Shivam Aggarwal">
                             <div class="contact-icon">📱</div>
                             <div class="contact-label">Phone</div>
                             <div class="contact-value">+91 9873216989</div>
                         </a>
                         
-                        <a href="https://linkedin.com/in/shivam-aggarwal" target="_blank" class="contact-item">
+                        <a href="https://linkedin.com/in/shivam-aggarwal" target="_blank" rel="noopener noreferrer" class="contact-item" aria-label="Connect on LinkedIn">
                             <div class="contact-icon">💼</div>
                             <div class="contact-label">LinkedIn</div>
                             <div class="contact-value">Connect</div>
                         </a>
                         
-                        <a href="https://github.com/shivam-aggarwal-git" target="_blank" class="contact-item">
+                        <a href="https://github.com/shivam-aggarwal-git" target="_blank" rel="noopener noreferrer" class="contact-item" aria-label="View GitHub profile">
                             <div class="contact-icon">💻</div>
                             <div class="contact-label">GitHub</div>
                             <div class="contact-value">View Profile</div>
@@ -957,12 +1051,53 @@
         </section>
 
         <footer>
-            <p>© 2026 Shivam Aggarwal</p>
-            <p style="margin-top: 1rem; color: var(--neon-blue);"></p>
+            <p>© 2024 Shivam Aggarwal</p>
         </footer>
     </div>
 
     <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const nav = document.querySelector('nav');
+        
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            nav.classList.toggle('nav-open');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                nav.classList.remove('nav-open');
+            });
+        });
+
+        // Hide/Show Navigation on Scroll (Mobile & Tablet)
+        let lastScrollTop = 0;
+        const scrollThreshold = 100;
+        
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            // Only apply on mobile/tablet
+            if (window.innerWidth <= 1024) {
+                if (scrollTop > lastScrollTop && scrollTop > scrollThreshold) {
+                    // Scrolling down
+                    nav.classList.add('nav-hidden');
+                    menuToggle.style.transform = 'translateY(-100px)';
+                    menuToggle.style.opacity = '0';
+                } else {
+                    // Scrolling up
+                    nav.classList.remove('nav-hidden');
+                    menuToggle.style.transform = 'translateY(0)';
+                    menuToggle.style.opacity = '1';
+                }
+            }
+            
+            lastScrollTop = scrollTop;
+        });
+
         // Particle Animation Canvas
         const canvas = document.getElementById('particles-canvas');
         const ctx = canvas.getContext('2d');
@@ -1094,7 +1229,7 @@
             });
         }, observerOptions);
         
-        document.querySelectorAll('.timeline-card, .hexagon-card, .stat-orb').forEach(el => {
+        document.querySelectorAll('.timeline-card, .skill-card, .stat-orb').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(50px)';
             el.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
